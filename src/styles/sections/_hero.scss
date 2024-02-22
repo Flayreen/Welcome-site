@@ -1,0 +1,6 @@
+.hero {
+
+  &__button {
+    @include button(14px, $black_color)
+  }
+}
