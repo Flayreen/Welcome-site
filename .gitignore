@@ -9,7 +9,7 @@ node_modules
 upload
 deploy.log
 config.yml
-package-lock.json
+#package-lock.json
 *.sass-cache*
 .svn
 settings_data.json
