@@ -24,17 +24,17 @@
 
 
 @mixin containerMobile() {
-  padding: 16px;
+  padding: 0 16px;
   box-sizing: border-box;
 }
 @mixin containerTablet() {
-  padding: 40px;
+  padding: 0 40px;
   box-sizing: border-box;
 }
 @mixin containerDesktop() {
   display: flex;
   justify-content: center;
-  padding: 15px;
+  padding: 0 15px;
   box-sizing: border-box;
 }
 

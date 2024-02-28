@@ -1,0 +1,135 @@
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+
+  background-color: $black_color;
+  padding: 16px 16px 0;
+  box-sizing: border-box;
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+
+  &__navigation {
+    display: none;
+  }
+
+  &__burger-btn {
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+  }
+
+  &__social-container {
+    display: flex;
+
+    &__social {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 36px;
+      width: 36px;
+
+      & svg {
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+}
+
+
+
+
+
+@media screen and (min-width: $min-tablet) {
+  .header {
+    padding: 0 40px;
+
+
+    &__navigation {
+      display: flex;
+      gap: 56px;
+
+      &__link {
+        @include styleText(16px, 400, 16px, $white_color, 0%, none);
+        text-decoration: none;
+        display: inline-block;
+        padding: 18px 0;
+
+        &--open {
+          border-bottom: 1px solid $white_color;
+        }
+      }
+    }
+
+    &__burger-btn {
+      display: none;
+    }
+
+    &__social-container {
+      display: flex;
+      gap: 14px;
+    }
+  }
+}
+
+
+
+@media screen and (min-width: $min-desktop) {
+  .header {
+    padding: 0 40px;
+    display: flex;
+    justify-content: center;
+
+    &__wrapper {
+      width: 100%;
+      max-width: 1320px;
+    }
+
+
+
+    &__navigation {
+      display: flex;
+      gap: 104px;
+
+      &__link {
+        @include styleText(22px, 400, 22px, $white_color, 0%, none);
+        text-decoration: none;
+        display: inline-block;
+        padding: 30px 0;
+
+        &:hover {
+          opacity: 0.8;
+        }
+
+        &--open {
+          border-bottom: 1px solid $white_color;
+        }
+      }
+    }
+
+
+    &__social-container {
+      display: flex;
+      gap: 36px;
+
+      &__social {
+        height: 44px;
+        width: 44px;
+
+        &:hover svg {
+          cursor: pointer;
+          opacity: 0.8;
+        }
+
+        & svg {
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+  }
+}
