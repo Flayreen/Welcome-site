@@ -92,7 +92,7 @@
 
 
     &__title {
-      @include styleText(110px, 700, 100%, $white_color, 15px, uppercase);
+      @include styleText(clamp(50px, 6.6vw, 110px), 700, 100%, $white_color, 15px, uppercase);
       text-align: right;
     }
 
@@ -117,7 +117,7 @@
 @media screen and (min-width: $min-desktop) {
   .skills {
     @include containerTablet();
-    margin-top: 0;
+    margin-top: 37px;
     padding-bottom: 13px;
     display: flex;
     justify-content: center;
