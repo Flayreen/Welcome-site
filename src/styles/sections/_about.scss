@@ -173,6 +173,12 @@
                 & button {
                     width: 171px;
                     height: 41px;
+
+                    &:hover {
+                        background-color: $black_color;
+                        color: $white_color;
+                        cursor: pointer;
+                    }
                 }
             }
         }
