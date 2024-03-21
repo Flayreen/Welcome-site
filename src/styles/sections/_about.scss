@@ -57,7 +57,7 @@
                 font-optical-sizing: auto;
                 font-style: normal;
                 font-variation-settings:"wdth" 100;
-                @include styleText(14px, 200, 20.86px, $black_color, 5%, capitalize);
+                @include styleText(14px, 200, 20.86px, $black_color, 5%, lowercase);
                 display: flex;
                 box-sizing: border-box;
                 gap: 4px;
@@ -168,7 +168,7 @@
                 margin: 0px 90px 0px 246px;
                 width: 404px;
                 .about_container_paragraphs {
-                    @include styleText(16px, 200, 23.84px, $black_color, 5%, capitalize);
+                    @include styleText(16px, 200, 23.84px, $black_color, 5%, lowercase);
                 }
                 & button {
                     width: 171px;
