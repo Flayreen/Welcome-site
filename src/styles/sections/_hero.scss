@@ -25,7 +25,6 @@
       @include styleText(clamp(60px, 21vw, 100px), 600, 100%, rgba(255, 255, 255, 0), 15px, uppercase);
       font-family: "Sometype Mono", monospace;
       -webkit-text-stroke: 3px $white_color;
-      text-stroke: 3px $white_color;
     }
 
     &__second-text {
@@ -109,7 +108,6 @@
 
         @include styleText(clamp(100px, 13vw, 180px), 600, 100%, rgba(255, 255, 255, 0), 15px, uppercase);
         -webkit-text-stroke: 3px $white_color;
-        text-stroke: 3px $white_color;
       }
 
       &__second-text {
@@ -206,7 +204,6 @@
 
         @include styleText(180px, 600, 100%, rgba(255, 255, 255, 0), 15px, uppercase);
         -webkit-text-stroke: 7px $white_color;
-        text-stroke: 7px $white_color;
       }
 
       &__second-text {
