@@ -28,7 +28,7 @@
                     @include styleText(28px, 700, 100%, $white_color, 7px, uppercase);
                     opacity: 0%;
                     &.active {
-                        animation: animationFeedback 1s ease 0s alternate forwards;
+                        animation: animationFeedback 1.2s ease 0s alternate forwards;
                     }
                 }
             }    
@@ -106,9 +106,6 @@
 
 @keyframes animationFeedback {
     0% {
-        opacity: 0%;
-    }
-    50% {
         opacity: 0%;
     }
     100% {

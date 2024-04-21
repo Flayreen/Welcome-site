@@ -23,6 +23,13 @@ function toggleActiveClass() {
     const aboutElement1 = document.querySelector('.about_container');
     const aboutElement2 = document.querySelector('.image_container_full');
     const aboutElement3 = document.querySelector('.image_container_stack');
+    const skillsElementTitle = document.querySelector('.skills__title');
+    const skillsElement1 = document.querySelector('.active1_tracker');
+    const skillsElement1b = document.querySelector('.active1_block_tracker');
+    const skillsElement2 = document.querySelector('.active2_tracker');
+    const skillsElement2b = document.querySelector('.active2_block_tracker');
+    const skillsElement3 = document.querySelector('.active3_tracker');
+    const skillsElement3b = document.querySelector('.active3_block_tracker');
     if (isElementInViewport(feedbackElement3)) {
         feedbackElement1.classList.add('active');
         feedbackElement2.classList.add('active');
@@ -32,6 +39,15 @@ function toggleActiveClass() {
         aboutElement1.classList.add('active');
         aboutElement2.classList.add('active');
         aboutElement3.classList.add('active');
+    };
+    if (isElementInViewport(skillsElement1)) {
+        skillsElementTitle.classList.add('active');
+        skillsElement1.classList.add('active1');
+        skillsElement1b.classList.add('active1_block');
+        skillsElement2.classList.add('active2');
+        skillsElement2b.classList.add('active2_block');
+        skillsElement3.classList.add('active3');
+        skillsElement3b.classList.add('active3_block');
     };
 }
 

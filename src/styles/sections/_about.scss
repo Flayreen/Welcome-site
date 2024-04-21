@@ -89,9 +89,6 @@
     0% {
         opacity: 0%;
     }
-    30% {
-        opacity: 0%;
-    }
     100% {
         opacity: 100%;
      }
@@ -100,10 +97,6 @@
 @keyframes animationAboutFull {
     0% {
         opacity: 0%;
-        left: -300px;
-    }
-    30% {
-        opacity: 100%;
         left: -300px;
     }
     100% {
@@ -117,10 +110,6 @@
         opacity: 0%;
         right: -500px;
     }
-    30% {
-        opacity: 100%;
-        right: -500px;
-    }
     100% {
         opacity: 100%;
         right: 0px;
@@ -128,34 +117,6 @@
 }
 
 @media screen and (min-width: $min-tablet) {
-    @keyframes animationAboutFull {
-        0% {
-            opacity: 0%;
-            left: -681px;
-        }
-        30% {
-            opacity: 100%;
-            left: -681px;
-        }
-        100% {
-            opacity: 100%;
-            left: 19px;
-        }
-    } 
-    @keyframes animationAboutStack {
-        0% {
-            opacity: 0%;
-            right: 700px;
-        }
-        30% {
-            opacity: 100%;
-            right: 700px;
-        }
-        100% {
-            opacity: 100%;
-            right: -3px;
-        }
-    }
     .about {
         padding-top: 0px;
         padding-bottom: 0px;
@@ -220,34 +181,6 @@
 }
 
 @media screen and (min-width: $min-desktop) {
-    @keyframes animationAboutFull {
-        0% {
-            opacity: 0%;
-            left: -921px;
-        }
-        30% {
-            opacity: 100%;
-            left: -921px;
-        }
-        100% {
-            opacity: 100%;
-            left: -79px;
-        }
-    }
-    @keyframes animationAboutStack {
-        0% {
-            opacity: 0%;
-            right: 905px;
-        }
-        30% {
-            opacity: 100%;
-            right: 905px;
-        }
-        100% {
-            opacity: 100%;
-            right: -95px;
-        }
-    }
     .about {
         @include containerDesktop();
         .about_container {
