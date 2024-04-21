@@ -7,18 +7,25 @@
     display: flex;
     flex-direction: column;
     gap: 42px;
+    position: relative;
   }
 
 
   &__title {
     @include styleText(50px, 700, 100%, $white_color, 10px, uppercase);
-    text-align: right;
+    right: 0px;
+    opacity: 0%;
+    position: absolute;
+    &.active {
+      animation: animationSkillsSkills 1.6s ease 0s alternate forwards;
+    }
   }
 
   &__content {
     display: flex;
     flex-direction: column;
     gap: 16px;
+    margin-top: 80px;
 
     &__row {
       display: flex;
@@ -44,6 +51,17 @@
 
       &__title {
         @include styleText(24px, 400, 150%, $white_color, 2px, capitalize);
+        opacity: 0%;
+        &.active1 {
+          animation: animationSkillsTitle1 1.2s ease 0s alternate forwards;
+        }
+        &.active2 {
+          animation: animationSkillsTitle1 1.2s ease 1.2s alternate forwards;
+        }
+        &.active3 {
+          animation: animationSkillsTitle1 1.2s ease 2.4s alternate forwards;
+        }
+
       }
 
       &__skills {
@@ -53,12 +71,24 @@
         width: 900px;
         padding-bottom: 24px;
         border-bottom: 1px solid $white_color;
+        opacity: 0%;
+
+        &.active1_block {
+          animation: animationSkillsBlock 1.2s ease 0s alternate forwards;
+        }
+        &.active2_block {
+          animation: animationSkillsBlock 1.2s ease 1.2s alternate forwards;
+        }
+        &.active3_block {
+          animation: animationSkillsBlock 1.2s ease 2.4s alternate forwards;
+        }
 
         &--medium {
-          width: 730px;
+          width: 730px; 
         }
         &--small {
           width: 310px;
+          
         }
 
         &__item {
@@ -75,10 +105,57 @@
   }
 }
 
+@keyframes animationSkillsSkills {
+  0% {
+      opacity: 100%;
+      right: -300px;
+  }
+  100% {
+      opacity: 100%;
+      right: 0px;
+  }
+}
+
+@keyframes animationSkillsTitle1 {
+  0% {
+      opacity: 0%;
+      transform: translateX(-300px);
+  }
+  100% {
+      opacity: 100%;
+      transform: translateX(0);
+  }
+}
+
+@keyframes animationSkillsBlock {
+  0% {
+      opacity: 0%;
+  }
+  50% {
+      opacity: 50%;
+  }
+  100% {
+      opacity: 100%;
+   }
+}
 
 
 
 @media screen and (min-width: $min-tablet) {
+  @keyframes animationSkillsSkills {
+    0% {
+        opacity: 0%;
+        right: -715px;
+    }
+    10% {
+        opacity: 100%;
+        right: -715px;
+    }
+    100% {
+        opacity: 100%;
+        right: 15px;
+    }
+  } 
   .skills {
     @include containerTablet();
     margin-top: 28px;
@@ -115,6 +192,20 @@
 
 
 @media screen and (min-width: $min-desktop) {
+  @keyframes animationSkillsSkills {
+    0% {
+        opacity: 0%;
+        right: -1000px;
+    }
+    10% {
+        opacity: 100%;
+        right: -1000px;
+    }
+    100% {
+        opacity: 100%;
+        right: 240px;
+    }
+  }
   .skills {
     @include containerTablet();
     margin-top: 37px;
