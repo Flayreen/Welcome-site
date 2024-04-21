@@ -11,6 +11,9 @@
         justify-content: space-between;
         position: relative;
         padding: 16px 16px 0;
+        &.active {
+          animation: animationHeader 1.6s ease 0s alternate forwards;
+        }
     }
 
     &__background {
@@ -84,6 +87,19 @@
         }
     }
 }
+
+@keyframes animationHeader {
+  0% {
+    top: -150px; 
+  }
+  10% {
+    top: -150px; 
+  }
+  100% {
+    top: 0px; 
+  }
+}
+
 
 
 @media screen and (min-width: $min-tablet) {
