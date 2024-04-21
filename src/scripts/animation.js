@@ -20,11 +20,19 @@ function toggleActiveClass() {
     const feedbackElement1 = document.querySelector('.feedback_container_back');
     const feedbackElement2 = document.querySelector('.feedback_line');
     const feedbackElement3 = document.querySelector('.feedback_container_card');
+    const aboutElement1 = document.querySelector('.about_container');
+    const aboutElement2 = document.querySelector('.image_container_full');
+    const aboutElement3 = document.querySelector('.image_container_stack');
     if (isElementInViewport(feedbackElement3)) {
         feedbackElement1.classList.add('active');
         feedbackElement2.classList.add('active');
         feedbackElement3.classList.add('active');
-    }
+    };
+    if (isElementInViewport(aboutElement1)) {
+        aboutElement1.classList.add('active');
+        aboutElement2.classList.add('active');
+        aboutElement3.classList.add('active');
+    };
 }
 
 // Додавання обробника події для виклику функції toggleActiveClass при прокрутці
@@ -32,6 +40,7 @@ window.addEventListener('scroll', toggleActiveClass);
 
 // Виклик функції toggleActiveClass для перевірки стану при завантаженні сторінки
 toggleActiveClass();
+
 
 
 
