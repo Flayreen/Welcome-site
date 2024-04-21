@@ -76,7 +76,7 @@
       gap: 16px;
 
       &__button {
-        @include button(16px, $white_color);
+        @include button(14px, $white_color);
         font-family: "Saira", sans-serif;
         width: 100%;
         display: flex;
