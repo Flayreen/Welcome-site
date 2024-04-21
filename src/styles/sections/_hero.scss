@@ -21,17 +21,26 @@
       position: absolute;
       bottom: 100px;
       left: 0;
+      opacity: 0%;
+
+      &.active {
+        animation: animationHeroDev 1.6s ease 0s alternate forwards;
+      }
 
       @include styleText(clamp(60px, 21vw, 100px), 600, 100%, rgba(255, 255, 255, 0), 15px, uppercase);
       font-family: "Sometype Mono", monospace;
       -webkit-text-stroke: 3px $white_color;
-      text-stroke: 3px $white_color;
     }
 
     &__second-text {
       position: absolute;
       bottom: 0;
       right: 0;
+      opacity: 0%;
+
+      &.active {
+        animation: animationHeroOps 1.6s ease 0s alternate forwards;
+      }
 
       @include styleText(clamp(60px, 21vw, 100px), 600, 100%, $white_color, 15px, uppercase);
       font-family: "Sometype Mono", monospace;
@@ -78,7 +87,27 @@
   }
 }
 
+@keyframes animationHeroDev {
+  0% {
+      opacity: 0%;
+      left: -500px;
+  }
+  100% {
+      opacity: 100%;
+      left: 0px;
+  }
+}
 
+@keyframes animationHeroOps {
+  0% {
+      opacity: 0%;
+      right: -500px;
+  }
+  100% {
+      opacity: 100%;
+      right: 0px;
+  }
+}
 
 
 @media screen and (min-width: $min-tablet) {
@@ -109,7 +138,6 @@
 
         @include styleText(clamp(100px, 13vw, 180px), 600, 100%, rgba(255, 255, 255, 0), 15px, uppercase);
         -webkit-text-stroke: 3px $white_color;
-        text-stroke: 3px $white_color;
       }
 
       &__second-text {
@@ -206,7 +234,6 @@
 
         @include styleText(180px, 600, 100%, rgba(255, 255, 255, 0), 15px, uppercase);
         -webkit-text-stroke: 7px $white_color;
-        text-stroke: 7px $white_color;
       }
 
       &__second-text {

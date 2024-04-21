@@ -8,6 +8,11 @@
         flex-direction: column;
         gap: 20px;
         box-sizing: border-box;
+        opacity: 0%;
+        &.active {
+            animation: animationAbout 1s ease 0s alternate forwards;
+        }
+        
         .about_container_title {
             @include styleText(22px, 479, 32.89px, $black_color, 5%, capitalize);
         }
@@ -33,7 +38,9 @@
                 @include styleText(clamp(50px, 14vw, 90px), 700, 100%, rgba(255, 255, 255, 0), 16px, uppercase);
                 font-family: "Sometype Mono", monospace;
                 -webkit-text-stroke: 3px $black_color;
-                
+                &.active {
+                    animation: animationAboutFull 1.6s ease 0s alternate forwards;
+                }
             }
             .image_container_stack {
                 position: absolute;
@@ -41,6 +48,9 @@
                 right: 0;
                 @include styleText(clamp(50px, 14vw, 90px), 700, 100%, $black_color, 15px, uppercase);
                 font-family: "Sometype Mono", monospace;
+                &.active {
+                    animation: animationAboutStack 1.6s ease 0s alternate forwards;
+                }
             }
         }
         .about_container_lowerblock {
@@ -72,6 +82,37 @@
                 @include button(16px, $black_color)
             }
         }
+    }
+}
+
+@keyframes animationAbout {
+    0% {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 100%;
+     }
+}
+
+@keyframes animationAboutFull {
+    0% {
+        opacity: 0%;
+        left: -300px;
+    }
+    100% {
+        opacity: 100%;
+        left: 0px;
+    }
+}
+
+@keyframes animationAboutStack {
+    0% {
+        opacity: 0%;
+        right: -500px;
+    }
+    100% {
+        opacity: 100%;
+        right: 0px;
     }
 }
 
