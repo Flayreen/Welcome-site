@@ -116,6 +116,7 @@
     }
 }
 
+
 @media screen and (min-width: $min-tablet) {
     .feedback {
         @include containerTablet();
