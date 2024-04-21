@@ -1,21 +1,21 @@
 const projects = [
     {
         title: "Final project vtormall",
-        photo: "assets/images/first-project.jpg",
+        photo: "assets/images/projects/first-project.jpg",
         description: "I was the Scrum Master in a team of 9 people, which created a fully functioning buying and selling platform. I was responsible for both the frontend and backend aspects of the project take on any task with great enthusiasm, especially if it involves React.",
         technologies: ["GIT", "GIT", "GIT", "GIT","GIT","GIT","GIT","GIT","Canvas", "CSS", "Ant Design", "HTML"],
         projectURL: "www.google.com",
     },
     {
         title: "Step project cards",
-        photo: "assets/images/second-project.jpg",
+        photo: "assets/images/projects/second-project.jpg",
         description: "A web application created by three people, where you can sign up and create cards for doctor meetings. You can also edit or delete them.",
         technologies: ["Python", "GIT", "GIT","GIT","GIT","GIT","GIT", "GIT","Canvas", "Java", "GIT", "Ant Design"],
         projectURL: "www.google.com",
     },
     {
         title: "Snak",
-        photo: "assets/images/third-project.jpg",
+        photo: "assets/images/projects/third-project.jpg",
         description: "Game snack made for the fun. The main controller is long, enveloping the creature, forming a snake that crawls along a plane (usually bounded by walls), collecting food (or other items), avoiding manifestation with its own tail and the edges of the playing field.",
         technologies: ["GIT", "Canvas", "CSS", "Ant Design", "HTML"],
         projectURL: "www.google.com",
