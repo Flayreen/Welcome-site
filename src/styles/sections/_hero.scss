@@ -21,6 +21,11 @@
       position: absolute;
       bottom: 100px;
       left: 0;
+      opacity: 0%;
+
+      &.active {
+        animation: animationHeroDev 1.6s ease 0s alternate forwards;
+      }
 
       @include styleText(clamp(60px, 21vw, 100px), 600, 100%, rgba(255, 255, 255, 0), 15px, uppercase);
       font-family: "Sometype Mono", monospace;
@@ -31,6 +36,11 @@
       position: absolute;
       bottom: 0;
       right: 0;
+      opacity: 0%;
+
+      &.active {
+        animation: animationHeroOps 1.6s ease 0s alternate forwards;
+      }
 
       @include styleText(clamp(60px, 21vw, 100px), 600, 100%, $white_color, 15px, uppercase);
       font-family: "Sometype Mono", monospace;
@@ -77,10 +87,66 @@
   }
 }
 
+@keyframes animationHeroDev {
+  0% {
+      opacity: 0%;
+      left: -500px;
+  }
+  10% {
+      opacity: 100%;
+      left: -500px;
+  }
+  100% {
+      opacity: 100%;
+      left: 0px;
+  }
+}
 
+@keyframes animationHeroOps {
+  0% {
+      opacity: 0%;
+      right: -500px;
+  }
+  10% {
+      opacity: 100%;
+      right: -500px;
+  }
+  100% {
+      opacity: 100%;
+      right: 0px;
+  }
+}
 
 
 @media screen and (min-width: $min-tablet) {
+  @keyframes animationHeroDev {
+    0% {
+        opacity: 0%;
+        left: -880px;
+    }
+    10% {
+        opacity: 100%;
+        left: -880px;
+    }
+    100% {
+        opacity: 100%;
+        left: -180px;
+    }
+  } 
+@keyframes animationHeroOps {
+    0% {
+        opacity: 0%;
+        right: -715px;
+    }
+    10% {
+        opacity: 100%;
+        right: -715px;
+    }
+    100% {
+        opacity: 100%;
+        right: 15px;
+    }
+} 
   .hero {
     @include containerTablet();
     margin-top: 52px;
@@ -167,6 +233,34 @@
 
 
 @media screen and (min-width: $min-desktop) {
+  @keyframes animationHeroDev {
+    0% {
+        opacity: 0%;
+        left: -1260px;
+    }
+    10% {
+        opacity: 100%;
+        left: -1260px;
+    }
+    100% {
+        opacity: 100%;
+        left: -260px;
+    }
+}
+@keyframes animationHeroOps {
+    0% {
+        opacity: 0%;
+        right: -1000px;
+    }
+    10% {
+        opacity: 100%;
+        right: -1000px;
+    }
+    100% {
+        opacity: 100%;
+        right: 240px;
+    }
+}
   .hero {
     @include containerDesktop();
     margin-top: 83px;
