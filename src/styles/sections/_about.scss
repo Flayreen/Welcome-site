@@ -73,13 +73,15 @@
                 gap: 4px;
                 flex-direction: column;
             }
-            .about_container_button {
-                font-family: "Saira", sans-serif;
-                font-optical-sizing: auto;
-                font-style: normal;
-                font-variation-settings:"wdth" 100;
-                border-radius: 3px;
-                @include button(16px, $black_color)
+            .about_container_link {
+                .about_container_button {
+                    font-family: "Saira", sans-serif;
+                    font-optical-sizing: auto;
+                    font-style: normal;
+                    font-variation-settings:"wdth" 100;
+                    border-radius: 3px;
+                    @include button(16px, $black_color)
+                }
             }
         }
     }
