@@ -1,6 +1,5 @@
 const form = document.querySelector(".contact__form");
 
-
 form.addEventListener("submit", async (event) => {
     event.preventDefault();
     try {
@@ -18,6 +17,16 @@ form.addEventListener("submit", async (event) => {
                 "Content-Type": "application/json"
             }
         });
+
+        if (response.ok) {
+            const modal = document.querySelector(".congratulation");
+            modal.classList.remove("congratulation-hidden");
+            document.body.style.overflow = "hidden";
+
+            const modalBackground = document.querySelector(".congratulation");
+            const modalScroll = window.scrollY;
+            modalBackground.style.top = modalScroll + "px";
+        }
 
     } catch (error) {
         console.log(error)

@@ -463,10 +463,10 @@
                 background-color: $white_color;
                 color: $black_color;
                 cursor: pointer;
+              }
 
-                &__icon-right path {
-                  stroke: $black_color;
-                }
+              &:hover &__icon-right path {
+                stroke: $black_color;
               }
             }
           }
