@@ -10,7 +10,7 @@ form.addEventListener("submit", async (event) => {
             text: formData.get('text')
         });
 
-        const response = await fetch("https://site-for-nastya-992919e1b4a3.herokuapp.com/mail", {
+        const response = await fetch("http://localhost:3002/mail", {
             method: "POST",
             body: dataToSend,
             headers: {
