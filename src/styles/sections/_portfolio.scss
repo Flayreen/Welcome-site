@@ -49,7 +49,7 @@
       z-index: 0;
       opacity: 0%;
       &.active {
-        animation: animationPortfolioTitle 1.6s ease 1.4s alternate forwards;
+        animation: animationPortfolioTitle 1.4s ease 1.3s alternate forwards;
       }
     }
   }
@@ -76,19 +76,19 @@
     &__number1 {
       opacity: 0%;
       &.active{
-        animation: animationPortfolioProjects 0.9s ease 0s alternate forwards;
+        animation: animationPortfolioProjects 0.8s ease 0s alternate forwards;
       }
     }
     &__number2 {
       opacity: 0%;
       &.active{
-        animation: animationPortfolioProjects 0.9s ease 0.9s alternate forwards;
+        animation: animationPortfolioProjects 0.8s ease 0.8s alternate forwards;
       }
     }
     &__number3 {
       opacity: 0%;
       &.active{
-        animation: animationPortfolioProjects 0.9s ease 1.8s alternate forwards;
+        animation: animationPortfolioProjects 0.8s ease 1.6s alternate forwards;
       }
     }
 
