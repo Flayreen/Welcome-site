@@ -111,6 +111,27 @@
 
 
 @media screen and (min-width: $min-tablet) {
+  @keyframes animationHeroDev {
+  0% {
+      opacity: 0%;
+      left: -680px;
+  }
+  100% {
+      opacity: 100%;
+      left: -180px;
+  }
+  }
+
+  @keyframes animationHeroOps {
+    0% {
+        opacity: 0%;
+        right: -485px;
+    }
+    100% {
+        opacity: 100%;
+        right: 15px;
+    }
+  }
   .hero {
     @include containerTablet();
     margin-top: 52px;
@@ -197,6 +218,27 @@
 
 
 @media screen and (min-width: $min-desktop) {
+  @keyframes animationHeroDev {
+    0% {
+        opacity: 0%;
+        left: -760px;
+    }
+    100% {
+        opacity: 100%;
+        left: -260px;
+    }
+    }
+  
+    @keyframes animationHeroOps {
+      0% {
+          opacity: 0%;
+          right: -260px;
+      }
+      100% {
+          opacity: 100%;
+          right: 240px;
+      }
+    }
   .hero {
     @include containerDesktop();
     margin-top: 83px;

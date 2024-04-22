@@ -20,9 +20,11 @@ function toggleActiveClass() {
     const feedbackElement1 = document.querySelector('.feedback_container_back');
     const feedbackElement2 = document.querySelector('.feedback_line');
     const feedbackElement3 = document.querySelector('.feedback_container_card');
+
     const aboutElement1 = document.querySelector('.about_container');
     const aboutElement2 = document.querySelector('.image_container_full');
     const aboutElement3 = document.querySelector('.image_container_stack');
+
     const skillsElementTitle = document.querySelector('.skills__title');
     const skillsElement1 = document.querySelector('.active1_tracker');
     const skillsElement1b = document.querySelector('.active1_block_tracker');
@@ -30,6 +32,15 @@ function toggleActiveClass() {
     const skillsElement2b = document.querySelector('.active2_block_tracker');
     const skillsElement3 = document.querySelector('.active3_tracker');
     const skillsElement3b = document.querySelector('.active3_block_tracker');
+
+    const portfolioElementImg = document.querySelector('.portfolio__title-container__image');
+    const portfolioElementTitle = document.querySelector('.portfolio__title-container__title');
+    const portfolioElementLine = document.querySelector('.portfolio__title-container');
+
+    const portfolioElementProjectContainer = document.querySelector('.portfolio__projects-container');
+    const portfolioElementProject1 = document.querySelector('.portfolio__projects-container__number1');
+    const portfolioElementProject2 = document.querySelector('.portfolio__projects-container__number2');
+    const portfolioElementProject3 = document.querySelector('.portfolio__projects-container__number3');
     if (isElementInViewport(feedbackElement3)) {
         feedbackElement1.classList.add('active');
         feedbackElement2.classList.add('active');
@@ -49,6 +60,16 @@ function toggleActiveClass() {
         skillsElement3.classList.add('active3');
         skillsElement3b.classList.add('active3_block');
     };
+    if (isElementInViewport(portfolioElementImg)) {
+        portfolioElementImg.classList.add('active');
+        portfolioElementTitle.classList.add('active');
+        portfolioElementLine.classList.add('active');
+    };
+    if (isElementInViewport(portfolioElementProjectContainer)) {
+        portfolioElementProject1.classList.add('active');
+        portfolioElementProject2.classList.add('active');
+        portfolioElementProject3.classList.add('active');
+    };
 }
 
 // Додавання обробника події для виклику функції toggleActiveClass при прокрутці
@@ -57,16 +78,3 @@ window.addEventListener('scroll', toggleActiveClass);
 // Виклик функції toggleActiveClass для перевірки стану при завантаженні сторінки
 toggleActiveClass();
 
-
-
-
-  // function isElementInViewport(el) {
-//   const rect = el.getBoundingClientRect();
-//   return (
-//     rect.top >= 0 &&
-//     rect.left >= 0 &&
-//     rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-//     rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-//   );
-// }
-  

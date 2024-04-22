@@ -8,6 +8,7 @@
     display: flex;
     flex-direction: column;
     gap: 50px;
+    box-sizing: border-box;
   }
 
 
@@ -18,32 +19,38 @@
     align-items: center;
     height: clamp(250px, 77vw, 341px);
 
-    &:after {
+    &.active::after {
       display: block;
       content: "";
       height: 0.5px;
       width: 100vw;
       background-color: $white_color;
       position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      z-index: 0;
+      z-index: -2;
+      opacity: 0%;
+      animation: animationPortfolioLine 1.6s ease 0s alternate forwards;
     }
 
     &__image {
       position: absolute;
       right: 17px;
       height: 100%;
-      z-index: 1;
+      z-index: -1;
+      opacity: 0%;
+      &.active {
+        animation: animationPortfolioImage 1.6s ease 0s alternate forwards;
+      }
     }
 
     &__title {
       @include styleText(clamp(20px, 11vw, 78px), 800, 100%, $black_color, 14px, uppercase);
       font-family: "Sometype Mono", monospace;
       -webkit-text-stroke: 1px $white_color;
-      text-stroke: 1px $white_color;
-      z-index: 2;
+      z-index: 0;
+      opacity: 0%;
+      &.active {
+        animation: animationPortfolioTitle 2.0s ease 2.2s alternate forwards;
+      }
     }
   }
 
@@ -65,6 +72,25 @@
     gap: 16px;
     width: fit-content;
     height: fit-content;
+
+    &__number1 {
+      opacity: 0%;
+      &.active{
+        animation: animationPortfolioProjects 1.2s ease 0s alternate forwards;
+      }
+    }
+    &__number2 {
+      opacity: 0%;
+      &.active{
+        animation: animationPortfolioProjects 1.2s ease 1.6s alternate forwards;
+      }
+    }
+    &__number3 {
+      opacity: 0%;
+      &.active{
+        animation: animationPortfolioProjects 1.2s ease 3.2s alternate forwards;
+      }
+    }
 
     &__item {
       display: flex;
@@ -158,6 +184,49 @@
   }
 }
 
+@keyframes animationPortfolioImage {
+  0% {
+      opacity: 0%;
+      transform: translateX(500px);
+  }
+  100% {
+      opacity: 100%;
+      transform: translateX(0);
+  }
+}
+
+@keyframes animationPortfolioTitle {
+  0% {
+      opacity: 0%;
+  }
+  50% {
+    opacity: 70%;
+  }
+  100% {
+      opacity: 100%;
+  }
+}
+
+@keyframes animationPortfolioLine {
+  0% {
+      opacity: 0%;
+      transform: translateX(-5000px);
+  }
+  100% {
+      opacity: 100%;
+      transform: translateX(0);
+  }
+}
+
+@keyframes animationPortfolioProjects {
+  0% {
+      opacity: 0%;
+  }
+  100% {
+      opacity: 100%;
+  }
+}
+
 
 @media screen and (min-width: $min-tablet) {
   .portfolio {
@@ -187,7 +256,6 @@
       &__title {
         @include styleText(clamp(78px, 11vw, 140px), 800, 100%, $black_color, 14px, uppercase);
         -webkit-text-stroke: 3px $white_color;
-        text-stroke: 3px $white_color;
       }
     }
 

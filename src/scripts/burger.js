@@ -96,7 +96,7 @@ function setActiveLink() {
 
     const maxVisibleBlock = visibleBlocks.reduce((prev, current) => {
         return (prev.height > current.height) ? prev : current;
-    });
+    }, { height: 0 });
 
     burgerSections.forEach(section => {
         if (section.link.getAttribute('href').substring(1) === maxVisibleBlock.id) {

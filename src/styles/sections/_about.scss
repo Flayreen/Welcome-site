@@ -108,7 +108,7 @@
 @keyframes animationAboutStack {
     0% {
         opacity: 0%;
-        right: -500px;
+        right: -300px;
     }
     100% {
         opacity: 100%;
@@ -117,6 +117,27 @@
 }
 
 @media screen and (min-width: $min-tablet) {
+    @keyframes animationAboutFull {
+        0% {
+            opacity: 0%;
+            left: -281px;
+        }
+        100% {
+            opacity: 100%;
+            left: 19px;
+        }
+    }
+
+    @keyframes animationAboutStack {
+        0% {
+            opacity: 0%;
+            right: 297px;
+        }
+        100% {
+            opacity: 100%;
+            right: -3px;
+        }
+    }
     .about {
         padding-top: 0px;
         padding-bottom: 0px;
@@ -181,6 +202,27 @@
 }
 
 @media screen and (min-width: $min-desktop) {
+    @keyframes animationAboutFull {
+        0% {
+            opacity: 0%;
+            left: -379px;
+        }
+        100% {
+            opacity: 100%;
+            left: -79px;
+        }
+    }
+
+    @keyframes animationAboutStack {
+        0% {
+            opacity: 0%;
+            right: 205px;
+        }
+        100% {
+            opacity: 100%;
+            right: -95px;
+        }
+    }
     .about {
         @include containerDesktop();
         .about_container {

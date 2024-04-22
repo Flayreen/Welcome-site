@@ -24,13 +24,14 @@ const projects = [
 
 function appendProjects() {
     const container = document.querySelector(".portfolio__projects-container");
-    projects.forEach(({title, photo, description, technologies, projectURL}) => {
+
+    projects.forEach(({title, photo, description, technologies, projectURL}, index) => {
         let technologiesText = "";
         technologies.forEach(elem => technologiesText += `<span class="portfolio__projects-container__item__content__actions__technologies__technology">${elem}</span>`)
         container.insertAdjacentHTML(
             "beforeend",
             `
-                 <div class="portfolio__projects-container__item">
+                 <div class="portfolio__projects-container__item portfolio__projects-container__number${index+1}">
                     <div class="portfolio__projects-container__item__photo">
                         <img src=${photo} alt="project photo">
                     </div>
