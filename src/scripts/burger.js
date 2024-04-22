@@ -51,7 +51,7 @@ document.querySelectorAll('.header__navigation__nav__link').forEach(link => {
         event.preventDefault();
         const targetId = this.getAttribute('href');
         const targetElement = document.querySelector(targetId);
-        const yOffset = -120; // Опціонально: встановіть зміщення, якщо потрібно
+        const yOffset = -120;
         const y = targetElement.getBoundingClientRect().top + window.pageYOffset + yOffset;
 
         // Прокрутка до відповідного блоку

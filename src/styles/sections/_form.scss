@@ -9,6 +9,10 @@
     display: flex;
     flex-direction: column;
     gap: 45px;
+    opacity: 0%;
+    &.active {
+      animation: animationFeedback 1s ease 0.2s alternate forwards;
+    }
   }
 
   &__image-container {
@@ -38,7 +42,6 @@
       @include styleText(clamp(40px, 11vw, 50px), 700, 100%, rgba(0, 0, 0, 0), 10px, uppercase);
       font-family: "Open Sans", sans-serif;
       -webkit-text-stroke: 1px $black_color;
-      text-stroke: 1px $black_color;
       z-index: 1;
     }
   }
@@ -73,7 +76,14 @@
   }
 }
 
-
+@keyframes animationFeedback {
+  0% {
+      opacity: 0%;
+  }
+  100% {
+      opacity: 100%;
+  }
+}
 
 @media screen and (min-width: $min-tablet) {
   .contact {
@@ -114,7 +124,6 @@
         right: 40px;
         @include styleText(clamp(50px, 7vw, 110px), 700, 100%, rgba(0, 0, 0, 0), 13px, uppercase);
         -webkit-text-stroke: 2px $black_color;
-        text-stroke: 2px $black_color;
         z-index: 1;
       }
     }
@@ -189,7 +198,6 @@
         right: 27px;
         @include styleText(110px, 700, 100%, rgba(0, 0, 0, 0), 13px, uppercase);
         -webkit-text-stroke: 3px $black_color;
-        text-stroke: 3px $black_color;
         z-index: 1;
       }
     }

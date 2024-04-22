@@ -53,13 +53,13 @@
         @include styleText(24px, 400, 150%, $white_color, 2px, capitalize);
         opacity: 0%;
         &.active1 {
-          animation: animationSkillsTitle1 1.2s ease 0s alternate forwards;
+          animation: animationSkillsTitle1 0.8s ease 0s alternate forwards;
         }
         &.active2 {
-          animation: animationSkillsTitle1 1.2s ease 1.2s alternate forwards;
+          animation: animationSkillsTitle1 0.8s ease 0.8s alternate forwards;
         }
         &.active3 {
-          animation: animationSkillsTitle1 1.2s ease 2.4s alternate forwards;
+          animation: animationSkillsTitle1 0.8s ease 1.6s alternate forwards;
         }
 
       }
@@ -74,13 +74,13 @@
         opacity: 0%;
 
         &.active1_block {
-          animation: animationSkillsBlock 1.2s ease 0s alternate forwards;
+          animation: animationSkillsBlock 0.8s ease 0s alternate forwards;
         }
         &.active2_block {
-          animation: animationSkillsBlock 1.2s ease 1.2s alternate forwards;
+          animation: animationSkillsBlock 0.8s ease 0.8s alternate forwards;
         }
         &.active3_block {
-          animation: animationSkillsBlock 1.2s ease 2.4s alternate forwards;
+          animation: animationSkillsBlock 0.8s ease 0.8s alternate forwards;
         }
 
         &--medium {
@@ -108,11 +108,11 @@
 @keyframes animationSkillsSkills {
   0% {
       opacity: 100%;
-      right: -300px;
+      transform: translateX(600px);
   }
   100% {
       opacity: 100%;
-      right: 0px;
+      transform: translateX(0);
   }
 }
 
@@ -142,20 +142,6 @@
 
 
 @media screen and (min-width: $min-tablet) {
-  @keyframes animationSkillsSkills {
-    0% {
-        opacity: 0%;
-        right: -715px;
-    }
-    10% {
-        opacity: 100%;
-        right: -715px;
-    }
-    100% {
-        opacity: 100%;
-        right: 15px;
-    }
-  } 
   .skills {
     @include containerTablet();
     margin-top: 28px;
@@ -192,20 +178,6 @@
 
 
 @media screen and (min-width: $min-desktop) {
-  @keyframes animationSkillsSkills {
-    0% {
-        opacity: 0%;
-        right: -1000px;
-    }
-    10% {
-        opacity: 100%;
-        right: -1000px;
-    }
-    100% {
-        opacity: 100%;
-        right: 240px;
-    }
-  }
   .skills {
     @include containerTablet();
     margin-top: 37px;
