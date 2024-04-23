@@ -1,6 +1,5 @@
 .feedback {
     background-color: $black_color;
-    @include containerMobile();
     .feedback_container_main {
         padding: 49px 0px 81px;
         width: 100vw;
@@ -14,6 +13,7 @@
                 box-sizing: border-box;
                 align-items: center;
                 gap: 10px; 
+                margin-left: 16px;
                 .feedback_container_feed {
                     @include styleText(28px, 700, 100%, rgba(255, 255, 255, 0), 7px, uppercase);
                     -webkit-text-stroke: 1px $white_color;
@@ -110,12 +110,13 @@
 
 @media screen and (min-width: $min-tablet) {
     .feedback {
-        @include containerTablet();
+        // @include containerTablet();
         .feedback_container_main {
             padding: 91px 0px 55px;
             .feedback_container_second {
                 margin-bottom: 38px;
                 .feedback_container_first {
+                    margin-left: 40px;
                     .feedback_container_feed {
                         @include styleText(50px, 700, 100%, rgba(255, 255, 255, 0), 14px, uppercase);
                         -webkit-text-stroke: 1px $white_color;
