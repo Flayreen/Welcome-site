@@ -27,9 +27,8 @@
                 }
             }    
             .feedback_line {
-                position: absolute;
-                left: 239px;
-                top: 11px;
+                position: relative;
+                right: 0;
                 height: 1px;
                 width: 100%;
                 background-color: $white_color;
@@ -124,10 +123,6 @@
                     .feedback_container_back {
                         @include styleText(50px, 700, 100%, $white_color, 14px, uppercase);
                     }
-                } 
-                .feedback_line {
-                    left: 440px;
-                    top: 18px;
                 }
             }
             .feedback_container_card {
@@ -158,6 +153,7 @@
                 gap: 54px;
                 margin-bottom: 103px;
                 .feedback_container_first {
+                    width: 100%;
                     gap: 26px;
                     .feedback_container_feed {
                         @include styleText(80px, 700, 100%, rgba(255, 255, 255, 0), 19.5px, uppercase);
@@ -167,13 +163,13 @@
                         @include styleText(80px, 700, 100%, $white_color, 19.5px, uppercase);
                     }
                 }
-                .feedback_line {
-                    position: relative;
-                    left: 0px;
-                    top: 0px;
-                    height: 1px;
-                    margin-top: 26px;
-                }
+                //.feedback_line {
+                //    position: relative;
+                //    left: 0px;
+                //    top: 0px;
+                //    height: 1px;
+                //    margin-top: 26px;
+                //}
             }
             .feedback_container_card {
                 .feedback_card {
