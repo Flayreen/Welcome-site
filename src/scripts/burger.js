@@ -1,4 +1,3 @@
-//Бургер кнопка
 const activeSvgList = document.querySelector('.header__burger-btn');
 const hiddenDivList = document.querySelector('.header__navigation');
 const closeSvg = document.querySelector('.header__navigation__burger_al svg');
@@ -9,9 +8,15 @@ activeSvgList.addEventListener('click', function (event) {
     event.stopPropagation();
     const computedStyle = window.getComputedStyle(hiddenDivList);
     if (computedStyle.left === '-235px') {
-        hiddenDivList.style.left = '-16px';
+        hiddenDivList.style.left = '0'; 
         background.style.display = 'block';
         bursgerAl.style.display = 'block';
+        document.body.classList.add('no-scroll');
+    } else {
+        hiddenDivList.style.left = '-235px';
+        background.style.display = 'none';
+        bursgerAl.style.display = 'none';
+        document.body.classList.remove('no-scroll'); 
     }
 });
 
@@ -20,6 +25,7 @@ closeSvg.addEventListener('click', function (event) {
     hiddenDivList.style.left = '-235px';
     background.style.display = 'none';
     bursgerAl.style.display = 'none';
+    document.body.classList.remove('no-scroll'); 
 });
 
 document.addEventListener('click', function (event) {
@@ -28,6 +34,7 @@ document.addEventListener('click', function (event) {
         hiddenDivList.style.left = '-235px';
         background.style.display = 'none';
         bursgerAl.style.display = 'none';
+        document.body.classList.remove('no-scroll'); 
     }
 });
 
@@ -38,6 +45,7 @@ function adjustDivListPosition() {
         hiddenDivList.style.left = '0px';
     }
 }
+
 
 // Викликаємо функцію при завантаженні сторінки та при зміні розміру вікна
 window.addEventListener('load', adjustDivListPosition);

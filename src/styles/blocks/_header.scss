@@ -25,7 +25,8 @@
         background-color: rgba(0, 0, 0, 0.44);
         z-index: 2;
         display: none; 
-    }
+        transition: left 0.3s ease;
+      }
 
     &__navigation {
         height: 100vh;
@@ -41,6 +42,7 @@
         flex-direction: column;
         gap: 22px;
         z-index: 3;
+        transition: left 0.3s ease;
         &__burger_al {
           display: none;
         }
@@ -87,6 +89,11 @@
         }
     }
 }
+
+.no-scroll {
+  overflow: hidden;
+}
+
 
 @keyframes animationHeader {
   0% {
