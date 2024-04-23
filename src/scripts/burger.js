@@ -70,6 +70,7 @@ document.querySelectorAll('.header__navigation__nav__link').forEach(link => {
             hiddenDivList.style.left = '-235px';
             background.style.display = 'none';
             bursgerAl.style.display = 'none';
+            document.body.classList.remove('no-scroll');
         }
     });
 });
